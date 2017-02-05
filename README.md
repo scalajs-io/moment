@@ -1,6 +1,7 @@
 Moment API for Scala.js
 =======================
-This is a Scala.js type-safe binding for [Moment](https://www.npmjs.com/package/moment)
+This is a Scala.js type-safe binding for [moment](https://www.npmjs.com/package/moment) and
+[moment-timezone](https://www.npmjs.com/package/moment-timezone)
 
 A moment library for NodeJS.
 
@@ -21,12 +22,17 @@ $ sbt clean publish-local
 $ sbt test
 ```
 
-#### Example
+#### Examples
 
 ```scala
-val dateString = "9/01/2016 6:17a"
-val dateObject = Moment(dateString, "M/DD/YYYY h:mma")
-println(s"dateObject => $dateObject") // Thu Sep 01 2016 06:17:00 GMT-0700
+val moment = Moment("9/01/2016 6:17a", "M/DD/YYYY h:mma")
+println(moment.toString) // Thu Sep 01 2016 06:17:00 GMT-0700
+```
+
+```scala
+val moment = Moment("2014-06-01T12:00:00Z")
+val output = moment.tz("America/Los_Angeles").format("ha z")
+println(output) // 5am PDT
 ```
 
 #### Artifacts and Resolvers
