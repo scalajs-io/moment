@@ -15,9 +15,6 @@ package object moment {
   val FRIDAY = 5
   val SATURDAY = 6
 
-  // ensure the moment-timezone package is loaded
-  MomentTimezone
-
   /**
     * Moment Extensions
     * @param moment the given [[Moment moment]] instance

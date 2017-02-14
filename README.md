@@ -1,16 +1,17 @@
 Moment API for Scala.js
 =======================
-This is a Scala.js type-safe binding for [moment](https://www.npmjs.com/package/moment) and
-[moment-timezone](https://www.npmjs.com/package/moment-timezone)
+[moment](https://www.npmjs.com/package/moment) - Parse, validate, manipulate, and display dates
 
-A moment library for NodeJS.
+### Description
 
-#### Build Dependencies
+Parse, validate, manipulate, and display dates.
 
-* [ScalaJs.io v0.3.x](https://github.com/ldaniels528/scalajs.io)
-* [SBT v0.13.13](http://www.scala-sbt.org/download.html)
+### Build Dependencies
 
-#### Build/publish the SDK locally
+* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
+* [SBT v0.13.13](http://www.scala-sbt.org/download.html)x
+
+### Build/publish the SDK locally
 
 ```bash
 $ sbt clean publish-local
@@ -22,25 +23,21 @@ $ sbt clean publish-local
 $ sbt test
 ```
 
-#### Examples
+### Examples
 
 ```scala
+import io.scalajs.npm.moment._
+
 val moment = Moment("9/01/2016 6:17a", "M/DD/YYYY h:mma")
-println(moment.toString) // Thu Sep 01 2016 06:17:00 GMT-0700
+println(moment.toString) //=> Thu Sep 01 2016 06:17:00 GMT-0700
 ```
 
-```scala
-val moment = Moment("2014-06-01T12:00:00Z")
-val output = moment.tz("America/Los_Angeles").format("ha z")
-println(output) // 5am PDT
-```
-
-#### Artifacts and Resolvers
+### Artifacts and Resolvers
 
 To add the Moment binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "moment" % "0.3.0.3"
+libraryDependencies += "io.scalajs.npm" %%% "moment" % "2.17.1"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
