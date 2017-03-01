@@ -8,7 +8,6 @@ Parse, validate, manipulate, and display dates.
 
 ### Build Dependencies
 
-* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)x
 
 ### Build/publish the SDK locally
@@ -37,7 +36,7 @@ println(moment.toString) //=> Thu Sep 01 2016 06:17:00 GMT-0700
 To add the Moment binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "moment" % "2.17.1"
+libraryDependencies += "io.scalajs.npm" %%% "moment" % "2.17.1-2"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
