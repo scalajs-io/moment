@@ -1,7 +1,5 @@
 package io.scalajs.npm
 
-import io.scalajs.util.ScalaJsHelper._
-
 /**
   * moment package object
   * @author lawrence.daniels@gmail.com
@@ -14,16 +12,5 @@ package object moment {
   val THURSDAY = 4
   val FRIDAY = 5
   val SATURDAY = 6
-
-  /**
-    * Moment Extensions
-    * @param moment the given [[Moment moment]] instance
-    */
-  implicit class MomentExtensions(val moment: Moment) extends AnyVal {
-
-    @inline
-    def tz(timeZone: String): Moment = moment.dynamic.tz(timeZone).asInstanceOf[Moment]
-
-  }
 
 }
